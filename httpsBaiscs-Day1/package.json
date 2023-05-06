@@ -1,0 +1,16 @@
+{
+  "name": "httpsbaiscs-day1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "topic1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon topic1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
