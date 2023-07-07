@@ -1,22 +1,42 @@
-Notes Backend Project for providing API's for all the requirements using express, mongoose and using mongoDB as data base.
+# Notes Backend Project
 
+This project provides APIs for various requirements using Express.js and Mongoose, with MongoDB as the database.
 
-API's- 
-created for 
-    - user registration - `/users/register`
-    - user login - `/users/login`
-    - Notes
-        - POST - `/notes/create`
-        - Delete - `/notes/:noteID`
-        - patch -  `/notes/:noteID`
-        - GET - `/notes`
+## API Endpoints
 
+- User Registration:
+  - POST `/users/register`
 
-bcrypt:- for hashing the password and storing in the dashboard.
-jwt: for token generation.
+- User Login:
+  - POST `/users/login`
 
+- Notes:
+  - Create a Note:
+    - POST `/notes/create`
 
-Relationships.
-1. Users can exist without notes. But notes can't exist with out users.
-    ==> User is independent and notes is dependent.
-2. In auth we will manipulate the req.body with the id of the user which will get by decoding the token and get the username or any other.
+  - Delete a Note:
+    - DELETE `/notes/:noteID`
+
+  - Update a Note:
+    - PATCH `/notes/:noteID`
+
+  - Get Notes:
+    - GET `/notes`
+
+## Features
+
+- Password Hashing:
+  - The project utilizes bcrypt for secure password hashing and storing in the DB.
+
+- Token Generation:
+  - JWT (JSON Web Tokens) are used for token generation, which helps identify the user for each request.
+
+## Relationships
+
+- Users can exist without notes, but notes cannot exist without users.
+- User is independent, and notes are dependent.
+- In the authentication process, the `req.body` is manipulated with the user's ID, obtained by decoding the token and retrieving the username or other relevant information.
+
+Feel free to modify and extend the project as per your requirements!
+
+If you have any questions or need further assistance, please feel free to reach out.
